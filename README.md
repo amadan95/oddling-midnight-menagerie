@@ -20,8 +20,18 @@ The production artifact is `dist/` and can be hosted as a static HTTPS site.
 
 The visual surface uses a self-hosted, two-ink SVG handbill renderer so the app has no WebGL dependency and remains accessible on constrained devices. It produces Coil, Kite, Ribbon, and Pebble families from the same deterministic recipe grammar.
 
+The creation flow keeps drawing, rhythm, and warmth as literal inputs: strokes are resampled by path length, tap intervals determine energy, and a three-second press or range input determines the print's ochre warmth. The renderer and PNG exports use the same derived silhouette geometry.
+
 ## Known delivery choices
 
 - Portrait and story exports are composed PNGs at 1080×1350 and 1080×1920; both use the Midnight Menagerie paper, typography, frame, creature, and specimen copy.
-- A single shared specimen opens as a featured act and begins companion creation; pair links open a deterministic two-creature encounter.
+- A single shared specimen opens as a featured act and begins companion creation; pair links open a deterministic Orbit, Echo, or Bow encounter.
 - The local collection is intentionally browser-local and retains the latest 12 completed specimens.
+
+## Checks
+
+```sh
+pnpm run typecheck
+pnpm test
+pnpm run build
+```
